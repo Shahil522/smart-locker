@@ -6,6 +6,8 @@
 import sys
 # keep the fake webrtcvad shim used elsewhere (your project included fake_webrtcvad)
 sys.modules['webrtcvad'] = __import__('fake_webrtcvad')
+from flask import jsonify
+
 
 from flask import Flask, request, jsonify, render_template, session, redirect, url_for
 from datetime import datetime
