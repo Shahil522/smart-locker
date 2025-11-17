@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Voice Verification — Smart Locker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 16px;
+      max-width: 450px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 26px;
+      color: #333;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 24px;
+      font-weight: 500;
+    }
+
+    .instructions {
+      background: #f8f9fa;
+      padding: 14px;
+      border-radius: 10px;
+      margin-bottom: 28px;
+      font-size: 13px;
+      color: #555;
+      line-height: 1.6;
+      text-align: left;
+      border-left: 4px solid #667eea;
+    }
+
+    .instructions strong {
+      display: block;
+      color: #667eea;
+      margin-bottom: 8px;
+    }
+
+    .instruction-line {
+      margin: 6px 0;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      border: none;
+      padding: 0;
+      border-radius: 50%;
+      font-size: 38px;
+      cursor: pointer;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 20px rgba(102, 126, 234, 0.35);
+      transition: all 0.2s ease;
+      margin: 30px auto;
+    }
+
+    .btn:hover:not(:disabled) {
+      transform: scale(1.08);
+      box-shadow: 0 12px 28px rgba(102, 126, 234, 0.5);
+    }
+
+    .btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
+    .btn.recording {
+      animation: pulse 1.2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 8px 20px rgba(102, 126, 234, 0.35); }
+      50% { box-shadow: 0 8px 35px rgba(102, 126, 234, 0.7); }
+    }
+
+    #timer {
+      font-weight: 700;
+      font-size: 20px;
+      color: #667eea;
+      margin: -20px auto 10px;
+      display: none;
+    }
+
+    #keywordStatus {
+      margin-top: 12px;
+      font-size: 13px;
+      min-height: 18px;
+      font-weight: 500;
+    }
+
+    #voiceStatus {
+      margin-top: 8px;
+      font-size: 13px;
+      min-height: 18px;
+      font-weight: 500;
+    }
+
+    #msg {
+      margin-top: 18px;
+      padding: 12px 14px;
+      border-radius: 8px;
+      min-height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .info {
+      background: #e3f2fd;
+      color: #0b63b7;
+    }
+
+    .success {
+      background: #dff7ea;
+      color: #078149;
+    }
+
+    .error {
+      background: #ffe7e7;
+      color: #c73838;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🔐 Voice Verification</h1>
+    <p class="subtitle">Voice Authentication</p>
+    <button id="recordBtn" class="btn">🎤</button>
+    <div id="timer">3</div>
+
+    <div id="keywordStatus"></div>
+    <div id="voiceStatus"></div>
+
+    <div id="msg" class="info">"</div>
+  </div>
+
+<script>
+const recordBtn = document.getElementById('recordBtn');
+const msg = document.getElementById('msg');
+const timerEl = document.getElementById('timer');
+const keywordStatus = document.getElementById('keywordStatus');
+const voiceStatus = document.getElementById('voiceStatus');
+let mediaRecorder, chunks = [], isRecording = false;
+
+function showMessage(text, type='info'){
+  msg.textContent = text;
+  msg.className = type === 'info' ? 'info' : type === 'success' ? 'success' : 'error';
+}
+
+function updateStatus(keywordMatch, voiceMatch){
+  keywordStatus.textContent = keywordMatch !== undefined ? (keywordMatch ? '✓ Keyword detected' : '✗ Keyword not detected') : '';
+  keywordStatus.style.color = keywordMatch === true ? '#078149' : keywordMatch === false ? '#c73838' : '#999';
+  voiceStatus.textContent = voiceMatch !== undefined ? (voiceMatch ? '✓ Voice matched' : '✗ Voice not matched') : '';
+  voiceStatus.style.color = voiceMatch === true ? '#078149' : voiceMatch === false ? '#c73838' : '#999';
+}
+
+async function startRecording(){
+  try{
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    mediaRecorder = new MediaRecorder(stream);
+    mediaRecorder.ondataavailable = e => chunks.push(e.data);
+    mediaRecorder.onstop = async () => {
+      timerEl.style.display = 'none';
+      recordBtn.classList.remove('recording');
+      showMessage('Processing voice...', 'info');
+      const blob = new Blob(chunks, { type: 'audio/wav' });
+      chunks = [];
+      try{
+        const res = await fetch('/api/send_audio', { method: 'POST', body: blob });
+        if(!res.ok) throw new Error('Server error: ' + res.status);
+        const data = await res.json();
+        updateStatus(data.keyword, data.voice_match);
+        if (data.verified === true){
+          showMessage('Voice verified ✓ Unlocking...', 'success');
+          setTimeout(() => window.location.href = '/locker', 900);
+        } else {
+          if (data.reason === 'voice_only'){
+            showMessage('Voice match failed', 'error');
+          } else {
+            if (!data.keyword) {
+              showMessage("Wrong phrase", 'error');
+            } else if (!data.voice_match) {
+              showMessage("Voice not matched ", 'error');
+            } else {
+              showMessage("Verification failed", 'error');
+            }
+          }
+          console.debug('verify response:', data);
+        }
+      } catch(err){
+        showMessage('Error: ' + err.message, 'error');
+      } finally {
+        recordBtn.disabled = false;
+      }
+    };
+
+    mediaRecorder.start();
+    isRecording = true;
+    recordBtn.disabled = true;
+    recordBtn.classList.add('recording');
+    let t = 3;
+    timerEl.style.display = 'block';
+    timerEl.textContent = t;
+    showMessage('Recording...', 'info');
+    const iv = setInterval(() => {
+      t--;
+      timerEl.textContent = t;
+      if(t <= 0){ clearInterval(iv); }
+    }, 1000);
+
+    setTimeout(() => {
+      if(isRecording){
+        isRecording = false;
+        mediaRecorder.stop();
+      }
+    }, 3000);
+
+  } catch(err){
+    showMessage('Microphone error: ' + err.message, 'error');
+  }
+}
+
+recordBtn.onclick = () => {
+  if(!isRecording) startRecording();
+};
+</script>
+</body>
+</html>
+</html>

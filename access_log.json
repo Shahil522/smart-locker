@@ -1,0 +1,2255 @@
+{
+  "logs": [
+    {
+      "event": "verify_attempt",
+      "text": "hello see some me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.8449130058288574,
+      "verified": true,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 08:06 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello see sammy",
+      "keyword_ok": true,
+      "voice_ok": false,
+      "score": 0.7794309258460999,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 08:06 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "pelosi some me",
+      "keyword_ok": true,
+      "voice_ok": false,
+      "score": 0.746047854423523,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 08:06 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "her last sunday",
+      "keyword_ok": false,
+      "voice_ok": false,
+      "score": 0.7031030654907227,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 08:06 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello see sammy",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.785980224609375,
+      "verified": true,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 08:06 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hi lucy me",
+      "keyword_ok": false,
+      "voice_ok": true,
+      "score": 0.7800259590148926,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 08:06 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello see some me",
+      "keyword_ok": true,
+      "voice_ok": false,
+      "score": 0.7316268682479858,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 08:05 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello see saw me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.8088906407356262,
+      "verified": true,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 08:05 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello see some me",
+      "keyword_ok": true,
+      "voice_ok": false,
+      "score": 0.7254519462585449,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 08:05 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hell losses saw me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.8429549932479858,
+      "verified": true,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 08:05 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello see sammy",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.8487135171890259,
+      "verified": true,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 08:05 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello she saw me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.8400110602378845,
+      "verified": true,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 08:05 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello she saw me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.847231924533844,
+      "verified": true,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 08:04 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "her loss he saw me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.8612852692604065,
+      "verified": true,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 08:04 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello see how me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.8361968994140625,
+      "verified": true,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 08:04 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello see some me",
+      "keyword_ok": true,
+      "voice_ok": false,
+      "score": 0.7022311687469482,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 08:04 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hair loss he saw me",
+      "keyword_ok": true,
+      "voice_ok": false,
+      "score": 0.7120927572250366,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 08:04 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "her loss losses army",
+      "keyword_ok": true,
+      "voice_ok": false,
+      "score": 0.6562255620956421,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 08:04 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "the last sunday",
+      "keyword_ok": false,
+      "voice_ok": false,
+      "score": 0.5840592980384827,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 08:04 PM"
+    },
+    {
+      "event": "OTP approved for +916909688773",
+      "time": "2025-11-16 08:03 PM"
+    },
+    {
+      "event": "OTP sent to +916909688773",
+      "time": "2025-11-16 08:03 PM"
+    },
+    {
+      "event": "face_verified",
+      "time": "2025-11-16 08:03 PM"
+    },
+    {
+      "event": "face_verified",
+      "time": "2025-11-16 08:02 PM"
+    },
+    {
+      "event": "face_verified",
+      "time": "2025-11-16 08:01 PM"
+    },
+    {
+      "event": "face_verified",
+      "time": "2025-11-16 07:59 PM"
+    },
+    {
+      "event": "face_verified",
+      "time": "2025-11-16 07:58 PM"
+    },
+    {
+      "event": "face_verified",
+      "time": "2025-11-16 07:58 PM"
+    },
+    {
+      "event": "face_verified",
+      "time": "2025-11-16 07:34 PM"
+    },
+    {
+      "event": "face_verified",
+      "time": "2025-11-16 07:34 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "her loss he saw me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.7809766530990601,
+      "verified": true,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 07:33 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "and loss he saw me",
+      "keyword_ok": false,
+      "voice_ok": false,
+      "score": 0.7786648273468018,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 07:33 PM"
+    },
+    {
+      "event": "OTP approved for +916909688773",
+      "time": "2025-11-16 07:33 PM"
+    },
+    {
+      "event": "OTP sent to +916909688773",
+      "time": "2025-11-16 07:33 PM"
+    },
+    {
+      "event": "face_verified",
+      "time": "2025-11-16 07:33 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "her last he saw me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.8444810509681702,
+      "verified": true,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 07:19 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "a loss he saw me",
+      "keyword_ok": true,
+      "voice_ok": false,
+      "score": 0.7609300017356873,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 07:19 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello cc me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.8467807769775391,
+      "verified": true,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 07:19 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello google",
+      "keyword_ok": true,
+      "voice_ok": false,
+      "score": 0.7340753078460693,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 07:19 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hi sis it",
+      "keyword_ok": false,
+      "voice_ok": false,
+      "score": 0.7709975838661194,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 07:19 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "and he knows his hear me",
+      "keyword_ok": false,
+      "voice_ok": false,
+      "score": 0.6243510246276855,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 07:18 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hi google",
+      "keyword_ok": false,
+      "voice_ok": true,
+      "score": 0.7928650379180908,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 07:18 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello si se me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.8611775636672974,
+      "verified": true,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 07:18 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hi google",
+      "keyword_ok": false,
+      "voice_ok": false,
+      "score": 0.7763224840164185,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 07:17 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "",
+      "keyword_ok": false,
+      "voice_ok": false,
+      "score": 0.4986874461174011,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 07:17 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "",
+      "keyword_ok": false,
+      "voice_ok": false,
+      "score": 0.6317838430404663,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 07:16 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "",
+      "keyword_ok": false,
+      "voice_ok": false,
+      "score": 0.5018476247787476,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 07:16 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "",
+      "keyword_ok": false,
+      "voice_ok": false,
+      "score": 0.6521682143211365,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 07:16 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "",
+      "keyword_ok": false,
+      "voice_ok": false,
+      "score": 0.5333424806594849,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 07:16 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "her loss he saw me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.8978264331817627,
+      "verified": true,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 07:16 PM"
+    },
+    {
+      "event": "OTP approved for +916909688773",
+      "time": "2025-11-16 07:16 PM"
+    },
+    {
+      "event": "OTP sent to +916909688773",
+      "time": "2025-11-16 07:15 PM"
+    },
+    {
+      "event": "face_verified",
+      "time": "2025-11-16 07:15 PM"
+    },
+    {
+      "event": "face_verified",
+      "time": "2025-11-16 06:55 PM"
+    },
+    {
+      "event": "face_verified",
+      "time": "2025-11-16 06:52 PM"
+    },
+    {
+      "event": "Auto-trained 5 samples",
+      "type": "resemblyzer",
+      "time": "2025-11-16 06:49 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello see some me",
+      "keyword_ok": true,
+      "voice_ok": false,
+      "score": 0.7787004709243774,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 06:37 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello see me",
+      "keyword_ok": true,
+      "voice_ok": false,
+      "score": 0.7393801212310791,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 06:36 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello see saw me",
+      "keyword_ok": true,
+      "voice_ok": false,
+      "score": 0.7375780344009399,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 06:36 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello see saw me",
+      "keyword_ok": true,
+      "voice_ok": false,
+      "score": 0.8362885117530823,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 06:36 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello see some me",
+      "keyword_ok": true,
+      "voice_ok": false,
+      "score": 0.8839500546455383,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 06:36 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "the losses or me",
+      "keyword_ok": true,
+      "voice_ok": false,
+      "score": 0.7116137742996216,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 06:36 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "pelosi sammy me",
+      "keyword_ok": true,
+      "voice_ok": false,
+      "score": 0.6863548159599304,
+      "verified": false,
+      "reason": "phrase+voice",
+      "emb_type_used": "resemblyzer",
+      "time": "2025-11-16 06:35 PM"
+    },
+    {
+      "event": "Auto-trained 5 samples",
+      "type": "resemblyzer",
+      "time": "2025-11-16 06:34 PM"
+    },
+    {
+      "event": "voice_training_complete",
+      "samples": 3,
+      "mean_similarity": 0.94535300663323,
+      "std_similarity": 0.011928543483109295,
+      "threshold_recommended": 0.9274601914085661,
+      "type": "resemblyzer",
+      "time": "2025-11-16 06:30 PM"
+    },
+    {
+      "event": "voice_training_complete",
+      "samples": 6,
+      "mean_similarity": 0.9262605060005447,
+      "std_similarity": 0.022684213992243064,
+      "threshold_recommended": 0.8922341850121801,
+      "type": "resemblyzer",
+      "time": "2025-11-16 06:29 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "pelosi saw me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.9535942077636719,
+      "verified": true,
+      "reason": "phrase+voice",
+      "time": "2025-11-16 05:50 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello see saab know",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.947928786277771,
+      "verified": true,
+      "reason": "phrase+voice",
+      "time": "2025-11-16 05:50 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "handlers he saw me",
+      "keyword_ok": false,
+      "voice_ok": true,
+      "score": 0.9050887227058411,
+      "verified": false,
+      "reason": "phrase+voice",
+      "time": "2025-11-16 05:50 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "",
+      "keyword_ok": false,
+      "voice_ok": true,
+      "score": 0.9315131902694702,
+      "verified": false,
+      "reason": "phrase+voice",
+      "time": "2025-11-16 05:49 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello see me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.9535825848579407,
+      "verified": true,
+      "reason": "phrase+voice",
+      "time": "2025-11-16 05:49 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello see saw me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.9551091194152832,
+      "verified": true,
+      "reason": "phrase+voice",
+      "time": "2025-11-16 05:49 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello she saw me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.9298285841941833,
+      "verified": true,
+      "reason": "phrase+voice",
+      "time": "2025-11-16 05:48 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello saw me",
+      "keyword_ok": true,
+      "voice_ok": false,
+      "score": 0.8612096905708313,
+      "verified": false,
+      "reason": "phrase+voice",
+      "time": "2025-11-16 05:46 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "the last he suddenly",
+      "keyword_ok": false,
+      "voice_ok": true,
+      "score": 0.9178057909011841,
+      "verified": false,
+      "reason": "phrase+voice",
+      "time": "2025-11-16 05:42 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "knows he was there once",
+      "keyword_ok": false,
+      "voice_ok": false,
+      "score": 0.8553034067153931,
+      "verified": false,
+      "reason": "phrase+voice",
+      "time": "2025-11-16 05:42 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "an analysis i mean",
+      "keyword_ok": false,
+      "voice_ok": true,
+      "score": 0.9427362084388733,
+      "verified": false,
+      "reason": "phrase+voice",
+      "time": "2025-11-16 05:42 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "",
+      "keyword_ok": false,
+      "voice_ok": false,
+      "score": 0.8851504921913147,
+      "verified": false,
+      "reason": "phrase+voice",
+      "time": "2025-11-16 05:41 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello see me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.9671117067337036,
+      "verified": true,
+      "reason": "phrase+voice",
+      "time": "2025-11-16 05:41 PM"
+    },
+    {
+      "event": "Auto-trained 5 samples",
+      "time": "2025-11-16 05:39 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "a see some summit",
+      "keyword_ok": false,
+      "voice_ok": true,
+      "score": 0.9579479694366455,
+      "verified": false,
+      "reason": "phrase+voice",
+      "time": "2025-11-16 05:07 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello see some me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.952305018901825,
+      "verified": true,
+      "reason": "phrase+voice",
+      "time": "2025-11-16 05:06 PM"
+    },
+    {
+      "event": "OTP approved for +916909688773",
+      "time": "2025-11-16 05:06 PM"
+    },
+    {
+      "event": "OTP sent to +916909688773",
+      "time": "2025-11-16 05:06 PM"
+    },
+    {
+      "event": "face_verified",
+      "time": "2025-11-16 05:06 PM"
+    },
+    {
+      "event": "Auto-trained 5 samples",
+      "time": "2025-11-16 05:01 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "pelosi sammy",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.9576590655325427,
+      "verified": true,
+      "reason": "phrase+voice",
+      "time": "2025-11-16 04:52 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "open sesame her lungs or something",
+      "keyword_ok": false,
+      "voice_ok": true,
+      "score": 0.9529847657543826,
+      "verified": false,
+      "reason": "phrase+voice",
+      "time": "2025-11-16 04:52 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello as he saw me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.9688784502355446,
+      "verified": true,
+      "reason": "phrase+voice",
+      "time": "2025-11-16 04:52 PM"
+    },
+    {
+      "event": "voice_training_complete",
+      "samples": 5,
+      "mean_similarity": 0.9744440922505063,
+      "std_similarity": 0.014151213991065802,
+      "threshold_recommended": 0.9532172712639077,
+      "time": "2025-11-16 04:52 PM"
+    },
+    {
+      "event": "voice_model_reset",
+      "time": "2025-11-16 04:48 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "her last he saw me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.9559215569534212,
+      "verified": true,
+      "reason": "phrase+voice",
+      "time": "2025-11-16 04:34 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "",
+      "keyword_ok": false,
+      "voice_ok": false,
+      "score": 0.829220892149107,
+      "verified": false,
+      "reason": "phrase+voice",
+      "time": "2025-11-16 04:34 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "when a la c savvy",
+      "keyword_ok": false,
+      "voice_ok": true,
+      "score": 0.9442761781320971,
+      "verified": false,
+      "reason": "phrase+voice",
+      "time": "2025-11-16 04:33 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello as he saw me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.946269022767577,
+      "verified": true,
+      "reason": "phrase+voice",
+      "time": "2025-11-16 04:33 PM"
+    },
+    {
+      "event": "OTP approved for +916909688773",
+      "time": "2025-11-16 04:32 PM"
+    },
+    {
+      "event": "OTP sent to +916909688773",
+      "time": "2025-11-16 04:32 PM"
+    },
+    {
+      "event": "face_verified",
+      "time": "2025-11-16 04:32 PM"
+    },
+    {
+      "event": "OTP approved for +916909688773",
+      "time": "2025-11-16 04:29 PM"
+    },
+    {
+      "event": "OTP sent to +916909688773",
+      "time": "2025-11-16 04:28 PM"
+    },
+    {
+      "event": "face_verified",
+      "time": "2025-11-16 04:28 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello she saw her",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.9518694913318623,
+      "verified": true,
+      "reason": "phrase+voice",
+      "time": "2025-11-15 05:38 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "",
+      "keyword_ok": false,
+      "voice_ok": true,
+      "score": 0.9683169157517857,
+      "verified": false,
+      "reason": "phrase+voice",
+      "time": "2025-11-15 05:36 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello see some me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.9625885345381493,
+      "verified": true,
+      "reason": "phrase+voice",
+      "time": "2025-11-15 05:35 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello he saw me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.9480313485915611,
+      "verified": true,
+      "reason": "phrase+voice",
+      "time": "2025-11-15 05:34 PM"
+    },
+    {
+      "event": "OTP approved for +916909688773",
+      "time": "2025-11-15 05:32 PM"
+    },
+    {
+      "event": "OTP sent to +916909688773",
+      "time": "2025-11-15 05:32 PM"
+    },
+    {
+      "event": "face_verified",
+      "time": "2025-11-15 05:31 PM"
+    },
+    {
+      "event": "face_verified",
+      "time": "2025-11-15 05:30 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello he saw me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.9700376674138376,
+      "verified": true,
+      "reason": "phrase+voice",
+      "time": "2025-11-15 02:41 PM"
+    },
+    {
+      "event": "OTP approved for +916909688773",
+      "time": "2025-11-15 02:40 PM"
+    },
+    {
+      "event": "OTP sent to +916909688773",
+      "time": "2025-11-15 02:40 PM"
+    },
+    {
+      "event": "face_verified",
+      "time": "2025-11-15 02:40 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "annie laurie i'm ready you are",
+      "keyword_ok": false,
+      "voice_ok": true,
+      "score": 0.9194820059274129,
+      "verified": false,
+      "reason": "phrase+voice",
+      "time": "2025-11-15 02:37 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "at lower everyone",
+      "keyword_ok": false,
+      "voice_ok": true,
+      "score": 0.9206666644822203,
+      "verified": false,
+      "reason": "phrase+voice",
+      "time": "2025-11-15 02:37 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hello everyone",
+      "keyword_ok": false,
+      "voice_ok": true,
+      "score": 0.9510126409772319,
+      "verified": false,
+      "reason": "phrase+voice",
+      "time": "2025-11-15 02:36 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "i've been see some me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.9538967782624516,
+      "verified": true,
+      "reason": "phrase+voice",
+      "time": "2025-11-15 02:36 PM"
+    },
+    {
+      "event": "OTP approved for +916909688773",
+      "time": "2025-11-15 02:36 PM"
+    },
+    {
+      "event": "OTP sent to +916909688773",
+      "time": "2025-11-15 02:36 PM"
+    },
+    {
+      "event": "face_verified",
+      "time": "2025-11-15 02:35 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "how can see some",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.9224860038194972,
+      "verified": true,
+      "reason": "phrase+voice",
+      "time": "2025-11-15 02:35 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "open as you saw me",
+      "keyword_ok": true,
+      "voice_ok": false,
+      "score": 0.9537127568540922,
+      "verified": false,
+      "reason": "phrase+voice",
+      "time": "2025-11-15 02:33 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "open sesame",
+      "keyword_ok": true,
+      "voice_ok": false,
+      "score": 0.9365312731904614,
+      "verified": false,
+      "reason": "phrase+voice",
+      "time": "2025-11-15 02:33 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "is happening",
+      "keyword_ok": false,
+      "voice_ok": true,
+      "score": 0.9609165830660211,
+      "verified": false,
+      "reason": "phrase+voice",
+      "time": "2025-11-15 02:28 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "open sesame",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.9677310511657805,
+      "verified": true,
+      "reason": "phrase+voice",
+      "time": "2025-11-15 02:28 PM"
+    },
+    {
+      "event": "OTP approved for +916909688773",
+      "time": "2025-11-15 02:28 PM"
+    },
+    {
+      "event": "OTP sent to +916909688773",
+      "time": "2025-11-15 02:28 PM"
+    },
+    {
+      "event": "face_verified",
+      "time": "2025-11-15 02:27 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "his homie",
+      "keyword_ok": false,
+      "voice_ok": true,
+      "score": 0.9891358613967896,
+      "verified": false,
+      "reason": "phrase+voice",
+      "time": "2025-11-15 02:22 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "open sesame",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.9876090288162231,
+      "verified": true,
+      "reason": "phrase+voice",
+      "time": "2025-11-15 02:22 PM"
+    },
+    {
+      "event": "OTP approved for +916909688773",
+      "time": "2025-11-15 02:21 PM"
+    },
+    {
+      "event": "OTP sent to +916909688773",
+      "time": "2025-11-15 02:21 PM"
+    },
+    {
+      "event": "face_verified",
+      "time": "2025-11-15 02:21 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "open",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.9866142272949219,
+      "verified": true,
+      "reason": "phrase+voice",
+      "time": "2025-11-15 02:17 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "open see some me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.9888412356376648,
+      "verified": true,
+      "reason": "phrase+voice",
+      "time": "2025-11-15 02:16 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "oh pnc sir",
+      "keyword_ok": false,
+      "voice_ok": true,
+      "score": 0.989604115486145,
+      "verified": false,
+      "reason": "phrase+voice",
+      "time": "2025-11-15 02:16 PM"
+    },
+    {
+      "event": "OTP approved for +916909688773",
+      "time": "2025-11-15 02:15 PM"
+    },
+    {
+      "event": "OTP sent to +916909688773",
+      "time": "2025-11-15 02:15 PM"
+    },
+    {
+      "event": "face_verified",
+      "time": "2025-11-15 02:15 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "hi locker",
+      "keyword_ok": false,
+      "voice_ok": true,
+      "score": 0.9952753186225891,
+      "verified": false,
+      "reason": "phrase+voice",
+      "time": "2025-11-15 02:13 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "",
+      "keyword_ok": false,
+      "voice_ok": true,
+      "score": 0.9648045301437378,
+      "verified": false,
+      "reason": "phrase+voice",
+      "time": "2025-11-15 02:13 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "opens he saw me",
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.9930666089057922,
+      "verified": true,
+      "reason": "phrase+voice",
+      "time": "2025-11-15 02:13 PM"
+    },
+    {
+      "event": "OTP approved for +916909688773",
+      "time": "2025-11-15 02:12 PM"
+    },
+    {
+      "event": "OTP sent to +916909688773",
+      "time": "2025-11-15 02:12 PM"
+    },
+    {
+      "event": "face_verified",
+      "time": "2025-11-15 02:12 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "open see some me",
+      "keyword_ok": false,
+      "voice_ok": true,
+      "score": 0.9551093578338623,
+      "verified": false,
+      "reason": "phrase+voice",
+      "time": "2025-11-15 02:00 PM"
+    },
+    {
+      "event": "verify_attempt",
+      "text": "open sea saw me",
+      "keyword_ok": false,
+      "voice_ok": true,
+      "score": 0.9910461902618408,
+      "verified": false,
+      "reason": "phrase+voice",
+      "time": "2025-11-15 02:00 PM"
+    },
+    {
+      "event": "single_train",
+      "time": "2025-11-15 01:59 PM"
+    },
+    {
+      "event": "OTP approved for +916909688773",
+      "time": "2025-11-15 01:59 PM"
+    },
+    {
+      "event": "OTP sent to +916909688773",
+      "time": "2025-11-15 01:59 PM"
+    },
+    {
+      "event": "face_verified",
+      "time": "2025-11-15 01:58 PM"
+    },
+    {
+      "event": "Auto-trained 5 samples",
+      "time": "2025-11-15 01:58 PM"
+    },
+    {
+      "event": "OTP approved for +916909688773",
+      "time": "2025-11-15 01:57 PM"
+    },
+    {
+      "event": "OTP sent to +916909688773",
+      "time": "2025-11-15 01:57 PM"
+    },
+    {
+      "event": "face_verified",
+      "time": "2025-11-15 01:57 PM"
+    },
+    {
+      "time": "2025-11-15T13:36:52.145978",
+      "event": "verify_attempt",
+      "text": "open sesame",
+      "transcript_norm": "open sesame",
+      "target_norm": "open sesame",
+      "sim": 1.0,
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.9993,
+      "verified": true,
+      "reason": "phrase+voice"
+    },
+    {
+      "time": "2025-11-15T13:36:30.662736",
+      "event": "verify_attempt",
+      "text": "open sesame",
+      "transcript_norm": "open sesame",
+      "target_norm": "open sesame",
+      "sim": 1.0,
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.9962,
+      "verified": true,
+      "reason": "phrase+voice"
+    },
+    {
+      "time": "2025-11-15T13:36:10.111373",
+      "event": "verify_attempt",
+      "text": "the open sea sesame",
+      "transcript_norm": "the open sea sesame",
+      "target_norm": "open sesame",
+      "sim": 0.7333,
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.9996,
+      "verified": true,
+      "reason": "phrase+voice"
+    },
+    {
+      "time": "2025-11-15T13:36:01.451063",
+      "event": "verify_attempt",
+      "text": "the apprentice i'm drug present betsy son robert",
+      "transcript_norm": "the apprentice im drug present betsy son robert",
+      "target_norm": "open sesame",
+      "sim": 0.2414,
+      "keyword_ok": false,
+      "voice_ok": true,
+      "score": 0.9998,
+      "verified": false,
+      "reason": "phrase+voice"
+    },
+    {
+      "time": "2025-11-15T13:35:42.503355",
+      "event": "verify_attempt",
+      "text": "open sesame",
+      "transcript_norm": "open sesame",
+      "target_norm": "open sesame",
+      "sim": 1.0,
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.9969,
+      "verified": true,
+      "reason": "phrase+voice"
+    },
+    {
+      "time": "2025-11-15T13:35:33.435831",
+      "event": "verify_attempt",
+      "text": "avensis of my neck",
+      "transcript_norm": "avensis of my neck",
+      "target_norm": "open sesame",
+      "sim": 0.4138,
+      "keyword_ok": false,
+      "voice_ok": true,
+      "score": 0.999,
+      "verified": false,
+      "reason": "phrase+voice"
+    },
+    {
+      "time": "2025-11-15T13:35:21.697255",
+      "event": "verify_attempt",
+      "text": "or bent see sammy a man",
+      "transcript_norm": "or bent see sammy a man",
+      "target_norm": "open sesame",
+      "sim": 0.5294,
+      "keyword_ok": false,
+      "voice_ok": true,
+      "score": 0.9996,
+      "verified": false,
+      "reason": "phrase+voice"
+    },
+    {
+      "time": "2025-11-15T13:35:07.201022",
+      "event": "verify_attempt",
+      "text": "open see saw me",
+      "transcript_norm": "open see saw me",
+      "target_norm": "open sesame",
+      "sim": 0.8462,
+      "keyword_ok": true,
+      "voice_ok": true,
+      "score": 0.9992,
+      "verified": true,
+      "reason": "phrase+voice"
+    },
+    {
+      "time": "2025-11-15T13:34:43.703788",
+      "event": "OTP verify +916909688773 -> success"
+    },
+    {
+      "time": "2025-11-15T13:34:19.129100",
+      "event": "OTP requested -> +916909688773"
+    },
+    {
+      "time": "2025-11-15T13:34:03.338968",
+      "event": "Face verified (confidence 38.41%)"
+    },
+    {
+      "time": "2025-11-15T13:26:26.962002",
+      "event": "OTP request error: \n\u001b[31m\u001b[49mHTTP Error\u001b[0m \u001b[37m\u001b[49mYour request was:\u001b[0m\n\n\u001b[36m\u001b[49mPOST /Services/VA03e87b38d4daa8e98e0a300f02b14a5d/Verifications\u001b[0m\n\n\u001b[37m\u001b[49mTwilio returned the following information:\u001b[0m\n\n\u001b[34m\u001b[49mUnable to create record: Invalid parameter `To`: 6909688773\u001b[0m\n\n\u001b[37m\u001b[49mMore information may be available here:\u001b[0m\n\n\u001b[34m\u001b[49mhttps://www.twilio.com/docs/errors/60200\u001b[0m\n\n"
+    },
+    {
+      "time": "2025-11-15T13:26:16.847360",
+      "event": "Face verified conf=39.3182919616987"
+    },
+    {
+      "time": "2025-11-15T13:26:10.373385",
+      "event": "Face verify: not matched"
+    },
+    {
+      "time": "2025-11-15 01:19 PM",
+      "event": "verify_attempt",
+      "transcript_raw": "ben says army a lot",
+      "transcript_norm": "ben says army a lot",
+      "target_norm": "open sesame",
+      "sim": 0.4,
+      "keyword_ok": false,
+      "voice_ok": true,
+      "score": 0.999,
+      "verified": false,
+      "reason": "phrase+voice"
+    },
+    {
+      "time": "2025-11-15 01:19 PM",
+      "event": "OTP verify for +916909688773: success"
+    },
+    {
+      "time": "2025-11-15 01:19 PM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-15 01:18 PM",
+      "event": "\u2705 Face verified (63.6% confidence)"
+    },
+    {
+      "time": "2025-11-15 01:14 PM",
+      "event": "verify_attempt",
+      "transcript_raw": "",
+      "transcript_norm": "",
+      "target_norm": "open sesame",
+      "sim": 0.0,
+      "keyword_ok": false,
+      "voice_ok": false,
+      "score": 0.0,
+      "verified": false,
+      "reason": "phrase+voice"
+    },
+    {
+      "time": "2025-11-15 01:14 PM",
+      "event": "Voice verify error: "
+    },
+    {
+      "time": "2025-11-15 12:53 PM",
+      "event": "send_audio error: "
+    },
+    {
+      "time": "2025-11-15 12:45 PM",
+      "event": "send_audio error: "
+    },
+    {
+      "time": "2025-11-15 12:41 PM",
+      "event": "Voice trained (MFCC)"
+    },
+    {
+      "time": "2025-11-15 12:37 PM",
+      "event": "Voice verify failed: keyword=False, voice=True, score=0.9983, text=\"\""
+    },
+    {
+      "time": "2025-11-15 12:37 PM",
+      "event": "Voice verify failed: keyword=False, voice=True, score=0.9991, text=\"\""
+    },
+    {
+      "time": "2025-11-15 12:37 PM",
+      "event": "Voice verify failed: keyword=False, voice=True, score=0.9993, text=\"\""
+    },
+    {
+      "time": "2025-11-15 12:37 PM",
+      "event": "OTP verify for +916909688773: success"
+    },
+    {
+      "time": "2025-11-15 12:36 PM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-15 12:36 PM",
+      "event": "\u2705 Face verified (59.02% confidence)"
+    },
+    {
+      "time": "2025-11-15 12:36 PM",
+      "event": "Face not recognized."
+    },
+    {
+      "time": "2025-11-15 12:34 PM",
+      "event": "Voice verify failed: keyword=False, voice=True, score=0.9979, text=\"\""
+    },
+    {
+      "time": "2025-11-15 12:34 PM",
+      "event": "OTP verify for +916909688773: success"
+    },
+    {
+      "time": "2025-11-15 12:33 PM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-15 12:32 PM",
+      "event": "\u2705 Face verified (48.77% confidence)"
+    },
+    {
+      "time": "2025-11-15 12:31 PM",
+      "event": "Voice verify failed: keyword=False, voice=False, score=0.0000, text=\"\""
+    },
+    {
+      "time": "2025-11-15 12:31 PM",
+      "event": "Voice verify error: "
+    },
+    {
+      "time": "2025-11-15 12:31 PM",
+      "event": "Voice trained (MFCC)"
+    },
+    {
+      "time": "2025-11-15 12:11 PM",
+      "event": "Voice trained"
+    },
+    {
+      "time": "2025-11-15 12:05 PM",
+      "event": "OTP verify: success"
+    },
+    {
+      "time": "2025-11-15 12:05 PM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-15 12:05 PM",
+      "event": "Face verified (43.32% confidence)"
+    },
+    {
+      "time": "2025-11-15 11:46 AM",
+      "event": "Voice verify failed: keyword=False, voice=True, score=0.9996, text=\"\""
+    },
+    {
+      "time": "2025-11-15 11:46 AM",
+      "event": "Voice verify failed: keyword=False, voice=True, score=0.9977, text=\"\""
+    },
+    {
+      "time": "2025-11-15 11:46 AM",
+      "event": "Voice verify failed: keyword=False, voice=True, score=0.9996, text=\"\""
+    },
+    {
+      "time": "2025-11-15 11:45 AM",
+      "event": "OTP verify for +916909688773: success"
+    },
+    {
+      "time": "2025-11-15 11:45 AM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-15 11:45 AM",
+      "event": "\u2705 Face verified (60.1% confidence)"
+    },
+    {
+      "time": "2025-11-15 11:41 AM",
+      "event": "Voice verify failed: keyword=False, voice=True, score=0.9972, text=\"\""
+    },
+    {
+      "time": "2025-11-15 11:40 AM",
+      "event": "OTP verify for +916909688773: success"
+    },
+    {
+      "time": "2025-11-15 11:40 AM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-15 11:40 AM",
+      "event": "\u2705 Face verified (53.78% confidence)"
+    },
+    {
+      "time": "2025-11-15 11:39 AM",
+      "event": "OTP verify for +916909688773: success"
+    },
+    {
+      "time": "2025-11-15 11:39 AM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-15 11:39 AM",
+      "event": "\u2705 Face verified (51.06% confidence)"
+    },
+    {
+      "time": "2025-11-15 11:31 AM",
+      "event": "Voice verified (score=0.9988) and keyword matched"
+    },
+    {
+      "time": "2025-11-15 11:31 AM",
+      "event": "Voice verify failed: keyword=False, voice=True, score=0.9979, text=\"often sicily\""
+    },
+    {
+      "time": "2025-11-15 11:31 AM",
+      "event": "Voice verify failed: keyword=False, voice=True, score=0.9989, text=\"offense you me\""
+    },
+    {
+      "time": "2025-11-15 11:30 AM",
+      "event": "OTP verify for +916909688773: success"
+    },
+    {
+      "time": "2025-11-15 11:30 AM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-15 11:30 AM",
+      "event": "\u2705 Face verified (65.36% confidence)"
+    },
+    {
+      "time": "2025-11-15 11:19 AM",
+      "event": "Voice verified (score=0.9983) and keyword matched"
+    },
+    {
+      "time": "2025-11-15 11:19 AM",
+      "event": "Voice verify failed: keyword=False, voice=True, score=0.9996, text=\"open sea she may\""
+    },
+    {
+      "time": "2025-11-15 11:18 AM",
+      "event": "Voice verify failed: keyword=False, voice=True, score=0.9993, text=\"open sea see mit\""
+    },
+    {
+      "time": "2025-11-15 11:18 AM",
+      "event": "Voice verified (score=0.9958) and keyword matched"
+    },
+    {
+      "time": "2025-11-15 11:18 AM",
+      "event": "Voice verify failed: keyword=False, voice=True, score=0.9992, text=\"often cc me\""
+    },
+    {
+      "time": "2025-11-15 11:18 AM",
+      "event": "OTP verify for +916909688773: success"
+    },
+    {
+      "time": "2025-11-15 11:17 AM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-15 11:17 AM",
+      "event": "\u2705 Face verified (43.76% confidence)"
+    },
+    {
+      "time": "2025-11-15 11:17 AM",
+      "event": "\u274c Face not recognized (confidence=66.83)"
+    },
+    {
+      "time": "2025-11-15 11:17 AM",
+      "event": "\u2705 Face verified (60.33% confidence)"
+    },
+    {
+      "time": "2025-11-15 11:16 AM",
+      "event": "\u2705 Face verified (54.07% confidence)"
+    },
+    {
+      "time": "2025-11-15 11:16 AM",
+      "event": "\u274c Face not recognized (confidence=72.28)"
+    },
+    {
+      "time": "2025-11-15 11:16 AM",
+      "event": "\u2705 Face verified (37.49% confidence)"
+    },
+    {
+      "time": "2025-11-15 11:16 AM",
+      "event": "\u274c Face not recognized (confidence=66.01)"
+    },
+    {
+      "time": "2025-11-15 11:15 AM",
+      "event": "\u2705 Face verified (41.03% confidence)"
+    },
+    {
+      "time": "2025-11-15 11:15 AM",
+      "event": "\u2705 Face verified (53.67% confidence)"
+    },
+    {
+      "time": "2025-11-15 11:14 AM",
+      "event": "Voice verified (score=0.9990) and keyword matched"
+    },
+    {
+      "time": "2025-11-15 11:13 AM",
+      "event": "Voice verify failed: keyword=False, voice=True, score=0.9996, text=\"oh bessie see me\""
+    },
+    {
+      "time": "2025-11-15 11:13 AM",
+      "event": "Voice verified (score=0.9967) and keyword matched"
+    },
+    {
+      "time": "2025-11-15 11:13 AM",
+      "event": "Voice verify failed: keyword=False, voice=True, score=0.9966, text=\"this is dirty pretty voice\""
+    },
+    {
+      "time": "2025-11-15 11:12 AM",
+      "event": "Voice verify failed: keyword=False, voice=True, score=0.9994, text=\"this is just you're pretty boys\""
+    },
+    {
+      "time": "2025-11-15 11:12 AM",
+      "event": "Voice verify failed: keyword=False, voice=True, score=0.9985, text=\"for fancy see me\""
+    },
+    {
+      "time": "2025-11-15 11:12 AM",
+      "event": "Voice verified (score=0.9977) and keyword matched"
+    },
+    {
+      "time": "2025-11-15 11:11 AM",
+      "event": "Voice verify failed: keyword=False, voice=True, score=0.9967, text=\"opens his humor\""
+    },
+    {
+      "time": "2025-11-15 11:11 AM",
+      "event": "Voice verify failed: keyword=False, voice=True, score=0.9997, text=\"would have been see me\""
+    },
+    {
+      "time": "2025-11-15 11:10 AM",
+      "event": "Voice verified (score=0.9978) and keyword matched"
+    },
+    {
+      "time": "2025-11-15 11:10 AM",
+      "event": "Voice verify failed: keyword=False, voice=True, score=0.9997, text=\"open see me\""
+    },
+    {
+      "time": "2025-11-15 11:10 AM",
+      "event": "Voice verify failed: keyword=False, voice=True, score=0.9982, text=\"\""
+    },
+    {
+      "time": "2025-11-15 11:10 AM",
+      "event": "Voice verified (score=0.9991) and keyword matched"
+    },
+    {
+      "time": "2025-11-15 11:09 AM",
+      "event": "OTP verify for +916909688773: success"
+    },
+    {
+      "time": "2025-11-15 11:09 AM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-15 11:09 AM",
+      "event": "\u2705 Face verified (62.1% confidence)"
+    },
+    {
+      "time": "2025-11-15 11:08 AM",
+      "event": "Voice trained (MFCC)"
+    },
+    {
+      "time": "2025-11-15 10:57 AM",
+      "event": "send_audio error: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Hp\\\\Desktop\\\\Smart-Door-Unlock-main\\\\backend\\\\static\\\\audio\\\\voice_20251115_105721.wav'"
+    },
+    {
+      "time": "2025-11-15 10:57 AM",
+      "event": "send_audio error: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Hp\\\\Desktop\\\\Smart-Door-Unlock-main\\\\backend\\\\static\\\\audio\\\\voice_20251115_105711.wav'"
+    },
+    {
+      "time": "2025-11-15 10:56 AM",
+      "event": "Voice trained (MFCC)"
+    },
+    {
+      "time": "2025-11-15 10:54 AM",
+      "event": "send_audio error: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Hp\\\\Desktop\\\\Smart-Door-Unlock-main\\\\backend\\\\static\\\\audio\\\\voice_20251115_105435.wav'"
+    },
+    {
+      "time": "2025-11-15 10:53 AM",
+      "event": "Voice trained (MFCC)"
+    },
+    {
+      "time": "2025-11-15 10:05 AM",
+      "event": "Train error: 'str' object has no attribute 'type'"
+    },
+    {
+      "time": "2025-11-15 10:04 AM",
+      "event": "Train error: 'str' object has no attribute 'type'"
+    },
+    {
+      "time": "2025-11-15 10:03 AM",
+      "event": "Train error: 'str' object has no attribute 'type'"
+    },
+    {
+      "time": "2025-11-15 10:03 AM",
+      "event": "Train error: 'str' object has no attribute 'type'"
+    },
+    {
+      "time": "2025-11-15 10:02 AM",
+      "event": "Train error: 'str' object has no attribute 'type'"
+    },
+    {
+      "time": "2025-11-15 10:00 AM",
+      "event": "Train error: 'str' object has no attribute 'type'"
+    },
+    {
+      "time": "2025-11-15 09:50 AM",
+      "event": "Train error: Error code: 403 - {'error': {'message': 'You are not allowed to generate embeddings from this model', 'type': 'invalid_request_error', 'param': None, 'code': None}}"
+    },
+    {
+      "time": "2025-11-15 09:40 AM",
+      "event": "\u2705 Voice verified (cosine=0.986)"
+    },
+    {
+      "time": "2025-11-15 09:40 AM",
+      "event": "DTW failed: 133.122"
+    },
+    {
+      "time": "2025-11-15 09:40 AM",
+      "event": "\u2705 Voice verified (cosine=0.989)"
+    },
+    {
+      "time": "2025-11-15 09:40 AM",
+      "event": "DTW failed: 111.989"
+    },
+    {
+      "time": "2025-11-15 09:40 AM",
+      "event": "OTP verify +916909688773: success"
+    },
+    {
+      "time": "2025-11-15 09:39 AM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-15 09:39 AM",
+      "event": "\u2705 Face verified (62.37%)"
+    },
+    {
+      "time": "2025-11-15 09:35 AM",
+      "event": "Voice trained"
+    },
+    {
+      "time": "2025-11-15 09:30 AM",
+      "event": "\u2705 Voice verified (0.979)"
+    },
+    {
+      "time": "2025-11-15 09:30 AM",
+      "event": "\u2705 Voice verified (0.983)"
+    },
+    {
+      "time": "2025-11-15 09:29 AM",
+      "event": "\u2705 Voice verified (0.979)"
+    },
+    {
+      "time": "2025-11-15 09:29 AM",
+      "event": "\u2705 Voice verified (0.955)"
+    },
+    {
+      "time": "2025-11-15 09:29 AM",
+      "event": "OTP verify +916909688773: success"
+    },
+    {
+      "time": "2025-11-15 09:29 AM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-15 09:29 AM",
+      "event": "\u2705 Face verified (57.85%)"
+    },
+    {
+      "time": "2025-11-15 09:27 AM",
+      "event": "Voice trained"
+    },
+    {
+      "time": "2025-11-15 09:27 AM",
+      "event": "Voice trained"
+    },
+    {
+      "time": "2025-11-15 09:22 AM",
+      "event": "OTP verify +916909688773: success"
+    },
+    {
+      "time": "2025-11-15 09:22 AM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-15 09:22 AM",
+      "event": "\u2705 Face verified (55.8%)"
+    },
+    {
+      "time": "2025-11-15 09:22 AM",
+      "event": "Face not recognized."
+    },
+    {
+      "time": "2025-11-15 09:17 AM",
+      "event": "OTP verify +916909688773: success"
+    },
+    {
+      "time": "2025-11-15 09:17 AM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-15 09:17 AM",
+      "event": "\u2705 Face verified (55.6%)"
+    },
+    {
+      "time": "2025-11-14 04:11 PM",
+      "event": "OTP verify for +916909688773: success"
+    },
+    {
+      "time": "2025-11-14 04:11 PM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-14 04:06 PM",
+      "event": "\u2705 Face verified (54.86% confidence)"
+    },
+    {
+      "time": "2025-11-14 04:04 PM",
+      "event": "\u2705 Face verified (59.2% confidence)"
+    },
+    {
+      "time": "2025-11-09 01:37 PM",
+      "event": "\u2705 Face verified (67.05% confidence)"
+    },
+    {
+      "time": "2025-11-09 01:37 PM",
+      "event": "Face not recognized."
+    },
+    {
+      "time": "2025-11-09 01:28 PM",
+      "event": "Error: module 'cv2.face' has no attribute 'LBPHFaceRecognizer_create'"
+    },
+    {
+      "time": "2025-11-09 01:28 PM",
+      "event": "Error: module 'cv2.face' has no attribute 'LBPHFaceRecognizer_create'"
+    },
+    {
+      "time": "2025-11-09 01:28 PM",
+      "event": "Error: module 'cv2.face' has no attribute 'LBPHFaceRecognizer_create'"
+    },
+    {
+      "time": "2025-11-09 01:05 PM",
+      "event": "\u274c Voice not recognized (similarity=0.63)"
+    },
+    {
+      "time": "2025-11-09 01:05 PM",
+      "event": "\u274c Voice not recognized (similarity=0.55)"
+    },
+    {
+      "time": "2025-11-09 01:05 PM",
+      "event": "\u274c Voice not recognized (similarity=0.52)"
+    },
+    {
+      "time": "2025-11-09 01:05 PM",
+      "event": "\u274c Voice not recognized (similarity=0.50)"
+    },
+    {
+      "time": "2025-11-09 01:04 PM",
+      "event": "\u2705 Voice verified (similarity=0.73)"
+    },
+    {
+      "time": "2025-11-09 01:04 PM",
+      "event": "OTP verify for +916909688773: success"
+    },
+    {
+      "time": "2025-11-09 01:04 PM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-09 01:04 PM",
+      "event": "\u2705 Face verified (61.86% confidence)"
+    },
+    {
+      "time": "2025-11-09 01:04 PM",
+      "event": "Face not recognized."
+    },
+    {
+      "time": "2025-11-09 01:04 PM",
+      "event": "Face not recognized."
+    },
+    {
+      "time": "2025-11-09 01:01 PM",
+      "event": "\u274c Voice not recognized (similarity=0.41)"
+    },
+    {
+      "time": "2025-11-09 01:01 PM",
+      "event": "\u274c Voice not recognized (similarity=0.41)"
+    },
+    {
+      "time": "2025-11-09 12:53 PM",
+      "event": "\u2705 Voice verified (similarity=0.72)"
+    },
+    {
+      "time": "2025-11-09 12:53 PM",
+      "event": "\u274c Voice not recognized (similarity=0.61)"
+    },
+    {
+      "time": "2025-11-09 12:53 PM",
+      "event": "\u274c Voice not recognized (similarity=0.58)"
+    },
+    {
+      "time": "2025-11-09 12:53 PM",
+      "event": "OTP verify for +916909688773: success"
+    },
+    {
+      "time": "2025-11-09 12:52 PM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-09 12:52 PM",
+      "event": "\u2705 Face verified (68.84% confidence)"
+    },
+    {
+      "time": "2025-11-09 12:24 PM",
+      "event": "\u26a0\ufe0f Reference voice not found. Cannot verify."
+    },
+    {
+      "time": "2025-11-09 12:24 PM",
+      "event": "OTP verify for +916909688773: success"
+    },
+    {
+      "time": "2025-11-09 12:24 PM",
+      "event": "OTP verify for +916909688773: fail"
+    },
+    {
+      "time": "2025-11-09 12:23 PM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-09 12:23 PM",
+      "event": "\u2705 Face verified with 63.16% confidence."
+    },
+    {
+      "time": "2025-11-09 12:23 PM",
+      "event": "Face not recognized."
+    },
+    {
+      "time": "2025-11-09 12:13 PM",
+      "event": "\u26a0\ufe0f Reference voice not found. Cannot verify."
+    },
+    {
+      "time": "2025-11-09 12:13 PM",
+      "event": "OTP verify for +916909688773: success"
+    },
+    {
+      "time": "2025-11-09 12:13 PM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-09 12:13 PM",
+      "event": "\u2705 Face verified with 59.85% confidence."
+    },
+    {
+      "time": "2025-11-08 02:35 PM",
+      "event": "\u26a0\ufe0f Reference voice not found. Cannot verify."
+    },
+    {
+      "time": "2025-11-08 02:34 PM",
+      "event": "\u26a0\ufe0f Reference voice not found. Cannot verify."
+    },
+    {
+      "time": "2025-11-08 02:34 PM",
+      "event": "\u26a0\ufe0f Reference voice not found. Cannot verify."
+    },
+    {
+      "time": "2025-11-08 02:34 PM",
+      "event": "\u26a0\ufe0f Reference voice not found. Cannot verify."
+    },
+    {
+      "time": "2025-11-08 02:33 PM",
+      "event": "OTP verify for +916909688773: success"
+    },
+    {
+      "time": "2025-11-08 02:33 PM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-08 02:33 PM",
+      "event": "\u2705 Face verified with 62.45% confidence."
+    },
+    {
+      "time": "2025-11-08 02:29 PM",
+      "event": "Error during recognition: module 'cv2' has no attribute 'face'"
+    },
+    {
+      "time": "2025-11-08 02:29 PM",
+      "event": "Error during recognition: module 'cv2' has no attribute 'face'"
+    },
+    {
+      "time": "2025-11-08 02:29 PM",
+      "event": "Error during recognition: module 'cv2' has no attribute 'face'"
+    },
+    {
+      "time": "2025-11-08 01:44 PM",
+      "event": "OTP verify for +916909688773: success"
+    },
+    {
+      "time": "2025-11-08 01:43 PM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-08 01:43 PM",
+      "event": "\u2705 Face verified with 64.62% confidence."
+    },
+    {
+      "time": "2025-11-08 01:40 PM",
+      "event": "\u26a0\ufe0f Reference voice not found. Cannot verify."
+    },
+    {
+      "time": "2025-11-08 01:40 PM",
+      "event": "\u26a0\ufe0f Reference voice not found. Cannot verify."
+    },
+    {
+      "time": "2025-11-08 01:40 PM",
+      "event": "OTP verify for +916909688773: success"
+    },
+    {
+      "time": "2025-11-08 01:39 PM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-08 01:39 PM",
+      "event": "\u2705 Face verified with 68.17% confidence."
+    },
+    {
+      "time": "2025-11-08 11:43 AM",
+      "event": "OTP verify for +916909688773: success"
+    },
+    {
+      "time": "2025-11-08 11:43 AM",
+      "event": "OTP verify for +916909688773: fail"
+    },
+    {
+      "time": "2025-11-08 11:43 AM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-08 11:42 AM",
+      "event": "\u2705 Face verified with 64.16% confidence."
+    },
+    {
+      "time": "2025-11-08 11:42 AM",
+      "event": "OTP verify for +916909688773: success"
+    },
+    {
+      "time": "2025-11-08 11:42 AM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-08 11:41 AM",
+      "event": "\u2705 Face verified with 64.55% confidence."
+    },
+    {
+      "time": "2025-11-08 11:41 AM",
+      "event": "Face not recognized."
+    },
+    {
+      "time": "2025-11-08 11:41 AM",
+      "event": "OTP verify for +916909688773: success"
+    },
+    {
+      "time": "2025-11-08 11:41 AM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-08 11:41 AM",
+      "event": "\u2705 Face verified with 67.97% confidence."
+    },
+    {
+      "time": "2025-11-08 11:40 AM",
+      "event": "Voice recorded: voice_20251108_114040.wav"
+    },
+    {
+      "time": "2025-11-08 11:40 AM",
+      "event": "OTP verify for +916909688773: success"
+    },
+    {
+      "time": "2025-11-08 11:39 AM",
+      "event": "OTP sent to +916909688773"
+    },
+    {
+      "time": "2025-11-08 11:39 AM",
+      "event": "\u2705 Face verified with 65.88% confidence."
+    },
+    {
+      "time": "2025-11-08 11:31 AM",
+      "event": "\u2705 Face verified with 71.0% confidence."
+    },
+    {
+      "time": "2025-11-08 09:37 AM",
+      "event": "\u2705 Face verified with 65.48% confidence."
+    },
+    {
+      "time": "2025-11-08 09:37 AM",
+      "event": "Face not recognized."
+    },
+    {
+      "time": "2025-11-08 09:26 AM",
+      "event": "\u2705 Face verified with 63.02% confidence."
+    },
+    {
+      "time": "2025-11-08 09:03 AM",
+      "event": "\u2705 Face verified with 59.71% confidence."
+    },
+    {
+      "time": "2025-11-08 09:01 AM",
+      "event": "\u2705 Face verified with 59.4% confidence."
+    },
+    {
+      "time": "2025-11-08 09:00 AM",
+      "event": "\u2705 Face verified with 39.52% confidence."
+    },
+    {
+      "time": "2025-11-08 09:00 AM",
+      "event": "\u2705 Face verified with 58.06% confidence."
+    },
+    {
+      "time": "2025-11-08 08:59 AM",
+      "event": "Face not recognized."
+    },
+    {
+      "time": "2025-11-08 08:59 AM",
+      "event": "\u2705 Face verified with 59.68% confidence."
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082544.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082536.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082527.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082526.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082526.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082526.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082524.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082524.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082524.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082524.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082524.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082523.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082523.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082523.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082523.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082523.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082522.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082522.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082522.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082521.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082517.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082516.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082511.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082510.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082504.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:25 AM",
+      "event": "Face verify attempt: face_verify_20251108_082502.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:24 AM",
+      "event": "Face verify attempt: face_verify_20251108_082455.jpg, verified=False"
+    },
+    {
+      "time": "2025-11-08 08:06 AM",
+      "event": "Face verify attempt saved: face_verify_20251108_080650.jpg, recognized=True"
+    },
+    {
+      "time": "2025-11-08 08:06 AM",
+      "event": "Face verify attempt saved: face_verify_20251108_080626.jpg, recognized=True"
+    }
+  ]
+}

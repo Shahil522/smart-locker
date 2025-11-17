@@ -1,0 +1,9 @@
+{
+  "owner": {
+    "name": "Shahil Mansuri",
+    "registered_phone": "+916909688773",
+    "face_image": "static/owner_face.jpg",
+    "voice_sample": "static/owner_voice.wav",
+    "passcode": "12345"
+  }
+}

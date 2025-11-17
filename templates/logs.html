@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Access Logs | Smart Door Unlock</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Access Logs</h2>
+    <div id="logs"></div>
+  </div>
+
+  <script>
+    async function loadLogs() {
+      const res = await fetch("/api/logs");
+      const data = await res.json();
+      const logsDiv = document.getElementById("logs");
+      logsDiv.innerHTML = "";
+      data.forEach(log => {
+        const entry = document.createElement("div");
+        entry.className = "log-entry";
+        entry.innerHTML = `
+          <p><strong>${log.time}</strong> — ${log.result}</p>
+          ${log.img ? `<img src="${log.img}" width="150">` : ""}
+        `;
+        logsDiv.appendChild(entry);
+      });
+    }
+    loadLogs();
+  </script>
+</body>
+</html>

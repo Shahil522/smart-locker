@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>Owner Panel</title></head>
+<body>
+  <h1>Owner Panel</h1>
+  <button onclick="checkAlert()">Check Alerts</button>
+  <button onclick="generateCode()">Generate OTP</button>
+  <pre id="output"></pre>
+<script>
+async function checkAlert(){
+  const r=await fetch('/api/check_alert');document.getElementById('output').textContent=JSON.stringify(await r.json(),null,2);
+}
+async function generateCode(){
+  const r=await fetch('/api/generate_code',{method:'POST'});document.getElementById('output').textContent=JSON.stringify(await r.json(),null,2);
+}
+</script>
+</body>
+</html>

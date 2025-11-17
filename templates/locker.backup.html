@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Locker Access Granted</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Base styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #2c3e50;
+    }
+
+    /* Container styles */
+    .container {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Lock button styles */
+    .btn-danger {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      position: relative;
+      overflow: hidden;
+      padding: 12px 25px;
+      background: linear-gradient(45deg, #ff6b6b, #ee5253);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 2rem;
+    }
+
+    .btn-danger:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(238, 82, 83, 0.4);
+    }
+
+    .btn-danger:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .btn-danger .lock-icon {
+      font-size: 1.2rem;
+      transition: transform 0.3s;
+    }
+
+    .btn-danger:hover .lock-icon {
+      transform: scale(1.2);
+    }
+
+    /* Lock overlay styles */
+    .lock-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(44, 62, 80, 0.97);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .lock-animation {
+      font-size: 5rem;
+      margin-bottom: 2rem;
+      animation: lockBounce 1s infinite;
+    }
+
+    .lock-message {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    @keyframes lockBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    /* Data section styles */
+    .data-section {
+      text-align: left;
+      margin: 1.5rem 0;
+      padding: 1rem;
+      background: rgba(45, 52, 54, 0.95);
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .data-section h3 {
+      font-size: 1rem;
+      margin: 0 0 1rem 0;
+      color: #fff;
+      opacity: 0.9;
+    }
+
+    .data-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+    }
+
+    .data-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .data-item:last-child {
+      border-bottom: none;
+    }
+
+    .label {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+    }
+
+    .value {
+      color: #fff;
+      font-weight: 500;
+    }
+
+    /* Document grid styles */
+    .document-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .document-item {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 0.8rem;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .document-item:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .doc-icon {
+      font-size: 1.2rem;
+    }
+
+    .doc-name {
+      color: #fff;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Security warning styles */
+    .security-warning {
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .security-warning p {
+      margin: 0.5rem 0;
+    }
+
+    @media (min-width: 768px) {
+      .data-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="success-banner"></div>
+    <div class="unlock-icon">🔓</div>
+    <h1>Access Granted</h1>
+    <div class="status">Authentication Successful</div>
+    
+    <div class="data-section">
+      <h3>Personal Information</h3>
+      <div class="data-grid">
+        <div class="data-item">
+          <span class="label">Account Holder:</span>
+          <span class="value">John A. Smith</span>
+        </div>
+        <div class="data-item">
+          <span class="label">Account Type:</span>
+          <span class="value">Premium Vault</span>
+        </div>
+        <div class="data-item">
+          <span class="label">Last Access:</span>
+          <span class="value">{{ last_access }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="data-section">
+      <h3>Financial Information</h3>
+      <div class="data-grid">
+        <div class="data-item">
+          <span class="label">Account Number:</span>
+          <span class="value">****-****-****-1234</span>
+        </div>
+        <div class="data-item">
+          <span class="label">Balance:</span>
+          <span class="value">$52,750.00</span>
+        </div>
+        <div class="data-item">
+          <span class="label">Credit Score:</span>
+          <span class="value">785 - Excellent</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="data-section">
+      <h3>Security Details</h3>
+      <div class="data-grid">
+        <div class="data-item">
+          <span class="label">Safety Box:</span>
+          <span class="value">#A-7851</span>
+        </div>
+        <div class="data-item">
+          <span class="label">Insurance:</span>
+          <span class="value">Active (Premium)</span>
+        </div>
+        <div class="data-item">
+          <span class="label">Valid Until:</span>
+          <span class="value">December 31, 2025</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="data-section">
+      <h3>Important Documents</h3>
+      <div class="document-grid">
+        <div class="document-item">
+          <span class="doc-icon">📄</span>
+          <span class="doc-name">Will.pdf</span>
+        </div>
+        <div class="document-item">
+          <span class="doc-icon">📄</span>
+          <span class="doc-name">Insurance_Policy.pdf</span>
+        </div>
+        <div class="document-item">
+          <span class="doc-icon">📄</span>
+          <span class="doc-name">Property_Deed.pdf</span>
+        </div>
+        <div class="document-item">
+          <span class="doc-icon">📄</span>
+          <span class="doc-name">Investments.pdf</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="security-warning">
+      <p>⚠️ For security reasons, some sensitive information is partially hidden.</p>
+      <p>Please ensure to protect your privacy and log out when finished.</p>
+    </div>
+
+    <button onclick="lockVault()" class="btn btn-danger" id="lockButton">
+      <span class="lock-icon">🔒</span>
+      <span class="btn-text">Lock Vault & Reset Authentication</span>
+    </button>
+
+    <div class="lock-overlay" id="lockOverlay">
+      <div class="lock-animation">🔒</div>
+      <div class="lock-message">Securing Vault...</div>
+    </div>
+  </div>
+
+  <script>
+    // Lock vault functionality
+    function lockVault() {
+      const button = document.getElementById('lockButton');
+      const overlay = document.getElementById('lockOverlay');
+      
+      if (!button || !overlay) return;
+      
+      // Disable button and show overlay
+      button.disabled = true;
+      overlay.style.display = 'flex';
+      
+      requestAnimationFrame(() => {
+        overlay.style.opacity = '1';
+      });
+
+      // Update button appearance
+      button.querySelector('.lock-icon').textContent = '🔒';
+      button.querySelector('.btn-text').textContent = 'Securing Vault...';
+
+      // Make API call to lock the vault
+      fetch('/reset', {
+        method: 'GET',
+        headers: { 'Cache-Control': 'no-cache' }
+      })
+      .then(response => {
+        if (!response.ok) throw new Error('Failed to lock vault');
+        
+        // Add success animation
+        const messages = [
+          'Securing sensitive data...',
+          'Encrypting vault contents...',
+          'Clearing session...',
+          'Resetting authentication...',
+          'Vault locked successfully!'
+        ];
+        
+        let i = 0;
+        const messageInterval = setInterval(() => {
+          if (i < messages.length) {
+            overlay.querySelector('.lock-message').textContent = messages[i];
+            i++;
+          } else {
+            clearInterval(messageInterval);
+            setTimeout(() => {
+              window.location.href = '/';
+            }, 1000);
+          }
+        }, 800);
+      })
+      .catch(error => {
+        overlay.querySelector('.lock-message').textContent = 'Error: ' + error.message;
+        setTimeout(() => {
+          overlay.style.opacity = '0';
+          setTimeout(() => {
+            overlay.style.display = 'none';
+            button.disabled = false;
+          }, 300);
+        }, 2000);
+      });
+    }
+
+    // Auto-lock functionality
+    const TIMEOUT = 5 * 60 * 1000; // 5 minutes
+    let inactivityTimer;
+
+    function resetTimer() {
+      if (inactivityTimer) clearTimeout(inactivityTimer);
+      inactivityTimer = setTimeout(lockVault, TIMEOUT);
+    }
+
+    // Set up auto-lock on user inactivity
+    ['mousemove', 'keypress', 'click', 'touchstart'].forEach(event => {
+      document.addEventListener(event, resetTimer);
+    });
+
+    // Start timer when page loads
+    document.addEventListener('DOMContentLoaded', resetTimer);
+  </script>
+</body>
+</html>

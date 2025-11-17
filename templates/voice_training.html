@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Voice Training — Smart Locker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 16px;
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 26px;
+      color: #333;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 24px;
+      font-weight: 500;
+    }
+
+    .instructions {
+      background: #f8f9fa;
+      padding: 14px;
+      border-radius: 10px;
+      margin-bottom: 28px;
+      font-size: 13px;
+      color: #555;
+      line-height: 1.6;
+      text-align: left;
+      border-left: 4px solid #667eea;
+    }
+
+    .instructions strong {
+      display: block;
+      color: #667eea;
+      margin-bottom: 8px;
+    }
+
+    .instruction-line {
+      margin: 6px 0;
+    }
+
+    .sample-counter {
+      background: #e3f2fd;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: #0b63b7;
+      font-weight: 600;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 12px;
+      margin: 30px 0;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-large {
+      width: 100px;
+      height: 100px;
+      padding: 0;
+      border-radius: 50%;
+      font-size: 38px;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .btn:hover:not(:disabled) {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    .btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .btn.secondary {
+      background: linear-gradient(135deg, #10b981, #059669);
+    }
+
+    .btn.danger {
+      background: linear-gradient(135deg, #ef4444, #dc2626);
+    }
+
+    .btn.recording {
+      animation: pulse 1.2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 8px 20px rgba(102, 126, 234, 0.35); }
+      50% { box-shadow: 0 8px 35px rgba(102, 126, 234, 0.7); }
+    }
+
+    #timer {
+      font-weight: 700;
+      font-size: 20px;
+      color: #667eea;
+      margin: 10px auto;
+      display: none;
+    }
+
+    #msg {
+      margin-top: 18px;
+      padding: 12px 14px;
+      border-radius: 8px;
+      min-height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .info {
+      background: #e3f2fd;
+      color: #0b63b7;
+    }
+
+    .success {
+      background: #dff7ea;
+      color: #078149;
+    }
+
+    .error {
+      background: #ffe7e7;
+      color: #c73838;
+    }
+
+    .samples-list {
+      background: #f8f9fa;
+      padding: 14px;
+      border-radius: 8px;
+      margin-top: 20px;
+      max-height: 200px;
+      overflow-y: auto;
+      font-size: 12px;
+      text-align: left;
+    }
+
+    .sample-item {
+      padding: 4px;
+      color: #555;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .sample-item:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🎤 Voice Training</h1>
+    <p class="subtitle">Record "hello sesame" to train your voice</p>
+
+    <div class="instructions">
+      <strong>Instructions:</strong>
+      <div class="instruction-line">1. Click the microphone button</div>
+      <div class="instruction-line">2. Say: <strong>"hello sesame"</strong> clearly</div>
+      <div class="instruction-line">3. Record at least 5 samples</div>
+      <div class="instruction-line">4. Click "Train Model" to finalize</div>
+    </div>
+
+    <div class="sample-counter">
+      Samples recorded: <span id="sampleCount">0</span>/5 (recommended)
+    </div>
+
+    <div class="button-group">
+      <button id="recordBtn" class="btn btn-large">🎤</button>
+    </div>
+
+    <div id="timer">3</div>
+
+    <div class="button-group">
+      <button id="trainBtn" class="btn btn-secondary" disabled>Train Model</button>
+      <button id="clearBtn" class="btn btn-danger">Clear All</button>
+    </div>
+
+    <div id="msg" class="info">Click microphone to start recording</div>
+
+    <div class="samples-list" id="samplesList"></div>
+  </div>
+
+<script>
+const recordBtn = document.getElementById('recordBtn');
+const trainBtn = document.getElementById('trainBtn');
+const clearBtn = document.getElementById('clearBtn');
+const msg = document.getElementById('msg');
+const timerEl = document.getElementById('timer');
+const sampleCount = document.getElementById('sampleCount');
+const samplesList = document.getElementById('samplesList');
+
+let mediaRecorder, chunks = [], isRecording = false;
+let recordedSamples = 0;
+
+function showMessage(text, type='info'){
+  msg.textContent = text;
+  msg.className = type === 'info' ? 'info' : type === 'success' ? 'success' : 'error';
+}
+
+function updateSampleCount(){
+  sampleCount.textContent = recordedSamples;
+  trainBtn.disabled = recordedSamples < 1;
+  
+  const item = document.createElement('div');
+  item.className = 'sample-item';
+  item.textContent = `✓ Sample ${recordedSamples} recorded`;
+  samplesList.appendChild(item);
+}
+
+async function startRecording(){
+  try{
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    mediaRecorder = new MediaRecorder(stream);
+    mediaRecorder.ondataavailable = e => chunks.push(e.data);
+    mediaRecorder.onstop = async () => {
+      timerEl.style.display = 'none';
+      recordBtn.classList.remove('recording');
+      showMessage('Uploading sample...', 'info');
+      
+      const blob = new Blob(chunks, { type: 'audio/wav' });
+      chunks = [];
+      
+      const formData = new FormData();
+      formData.append('audio', blob, `sample_${Date.now()}.wav`);
+      
+      try{
+        const res = await fetch('/api/train_voice', { method: 'POST', body: formData });
+        if(!res.ok) throw new Error('Server error: ' + res.status);
+        const data = await res.json();
+        
+        recordedSamples++;
+        updateSampleCount();
+        showMessage(`✓ Sample ${recordedSamples} saved! Record more or train now.`, 'success');
+      } catch(err){
+        showMessage('Error: ' + err.message, 'error');
+      } finally {
+        recordBtn.disabled = false;
+      }
+    };
+
+    mediaRecorder.start();
+    isRecording = true;
+    recordBtn.disabled = true;
+    recordBtn.classList.add('recording');
+    let t = 3;
+    timerEl.style.display = 'block';
+    timerEl.textContent = t;
+    showMessage('Recording... say "hello sesame"', 'info');
+    const iv = setInterval(() => {
+      t--;
+      timerEl.textContent = t;
+      if(t <= 0){ clearInterval(iv); }
+    }, 1000);
+
+    setTimeout(() => {
+      if(isRecording){
+        isRecording = false;
+        mediaRecorder.stop();
+      }
+    }, 3000);
+
+  } catch(err){
+    showMessage('Microphone error: ' + err.message, 'error');
+  }
+}
+
+async function trainModel(){
+  if(recordedSamples < 1){
+    showMessage('Record at least 1 sample first!', 'error');
+    return;
+  }
+  
+  trainBtn.disabled = true;
+  showMessage('Training voice model... This may take a moment...', 'info');
+  
+  try{
+    const res = await fetch('/api/finalize_voice_training', { method: 'POST' });
+    if(!res.ok) throw new Error('Server error: ' + res.status);
+    const data = await res.json();
+    
+    showMessage('✓ Voice model trained! Redirecting to verification...', 'success');
+    setTimeout(() => window.location.href = '/voice_recognition', 1500);
+  } catch(err){
+    showMessage('Training error: ' + err.message, 'error');
+    trainBtn.disabled = false;
+  }
+}
+
+function clearAll(){
+  if(confirm('Clear all recorded samples?')){
+    recordedSamples = 0;
+    sampleCount.textContent = '0';
+    samplesList.innerHTML = '';
+    trainBtn.disabled = true;
+    showMessage('All samples cleared. Start recording again.', 'info');
+  }
+}
+
+recordBtn.onclick = () => {
+  if(!isRecording) startRecording();
+};
+
+trainBtn.onclick = trainModel;
+clearBtn.onclick = clearAll;
+</script>
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Locker Access Granted</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #0d1a2d 0%, #152a45 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+    }
+
+    :root {
+      --accent: #14d8ff;
+      --accent-strong: #00b8ff;
+      --text-strong: #e9f6ff;
+      --text-soft: #cbe6ff;
+      --card-bg: rgba(255,255,255,0.12);
+      --card-bg-strong: rgba(255,255,255,0.18);
+      --border: rgba(255,255,255,0.28);
+    }
+
+    /* Glow Background */
+    .glow {
+      position: fixed;
+      width: 1000px;
+      height: 1000px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(50,170,255,0.4), transparent 70%);
+      filter: blur(140px);
+      z-index: -1;
+    }
+
+    /* Container */
+    .container {
+      width: 92%;
+      max-width: 1100px;
+      background: rgba(17,34,56,0.8);
+      border-radius: 20px;
+      padding: 40px;
+      border: 1px solid rgba(255,255,255,0.22);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+      backdrop-filter: blur(14px) saturate(180%);
+      color: var(--text-strong);
+      max-height: 92vh;
+      overflow-y: auto;
+    }
+
+    /* Top UI */
+    .unlock-icon {
+      font-size: 100px;
+      text-align: center;
+      color: var(--accent);
+      text-shadow: 0 0 18px rgba(0,200,255,0.6);
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .status {
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 16px;
+      background: rgba(0,200,255,0.18);
+      color: var(--accent-strong);
+      border-radius: 999px;
+      display: inline-block;
+      margin-bottom: 25px;
+      border: 1px solid rgba(0,200,255,0.35);
+    }
+
+    /* Sections */
+    .section {
+      background: var(--card-bg);
+      border-radius: 14px;
+      padding: 22px;
+      margin-bottom: 25px;
+      border: 1px solid var(--border);
+    }
+
+    .section h3 {
+      font-size: 18px;
+      margin-bottom: 18px;
+      color: var(--accent-strong);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Data Grid */
+    .data-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .item {
+      background: var(--card-bg-strong);
+      padding: 16px;
+      border-radius: 12px;
+      border-left: 4px solid var(--accent-strong);
+      transition: 0.2s;
+    }
+
+    .item:hover {
+      transform: translateY(-3px);
+      background: rgba(0,200,255,0.22);
+    }
+
+    .label {
+      font-size: 13px;
+      color: var(--text-soft);
+      margin-bottom: 4px;
+    }
+
+    .value {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-strong);
+    }
+
+    /* Documents */
+    .document-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 14px;
+    }
+
+    .doc-item {
+      background: rgba(255,255,255,0.15);
+      padding: 18px;
+      border-radius: 12px;
+      text-align: center;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.28);
+      transition: 0.2s;
+    }
+
+    .doc-item:hover {
+      background: rgba(0,200,255,0.25);
+      transform: translateY(-6px);
+    }
+
+    .doc-icon { font-size: 28px; }
+    .doc-name { margin-top: 6px; font-size: 14px; color: var(--text-strong); }
+
+    /* Lock Button */
+    .btn-lock {
+      width: 100%;
+      padding: 16px;
+      font-size: 18px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #98e9ff, #00c4ff);
+      border: none;
+      color: #002b38;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 12px 30px rgba(0,200,255,0.4);
+    }
+
+    .btn-lock:hover {
+      transform: translateY(-4px);
+    }
+
+    /* Overlay */
+    .lock-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(5,15,25,0.95);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 22px;
+      z-index: 1000;
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+
+    .lock-overlay .icon {
+      font-size: 120px;
+      margin-bottom: 15px;
+      text-shadow: 0 0 30px rgba(0,200,255,0.6);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="glow"></div>
+
+  <div class="container">
+
+    <div class="unlock-icon">🔓</div>
+    <h1>Vault Unlocked</h1>
+    <div class="status">✓ Authentication Successful</div>
+
+    <!-- SECTION 1 -->
+    <div class="section">
+      <h3>💼 Account Information</h3>
+      <div class="data-grid">
+        <div class="item"><span class="label">Account Holder</span><span class="value">John A. Smith</span></div>
+        <div class="item"><span class="label">Account Type</span><span class="value">Premium Vault</span></div>
+        <div class="item"><span class="label">Last Access</span><span class="value">{{ last_access }}</span></div>
+        <div class="item"><span class="label">Access Method</span><span class="value">Voice + Keyword</span></div>
+      </div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="section">
+      <h3>💰 Financial Information</h3>
+      <div class="data-grid">
+        <div class="item"><span class="label">Account Number</span><span class="value">****-****-1234</span></div>
+        <div class="item"><span class="label">Balance</span><span class="value">$52,750.00</span></div>
+        <div class="item"><span class="label">Credit Score</span><span class="value">785 (Excellent)</span></div>
+        <div class="item"><span class="label">Currency</span><span class="value">USD</span></div>
+      </div>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="section">
+      <h3>📄 Important Documents</h3>
+      <div class="document-grid">
+        <div class="doc-item"><span class="doc-icon">📄</span><span class="doc-name">Will.pdf</span></div>
+        <div class="doc-item"><span class="doc-icon">📄</span><span class="doc-name">Insurance.pdf</span></div>
+        <div class="doc-item"><span class="doc-icon">📄</span><span class="doc-name">PropertyDeed.pdf</span></div>
+        <div class="doc-item"><span class="doc-icon">📄</span><span class="doc-name">Tax_Returns.pdf</span></div>
+      </div>
+    </div>
+
+    <button class="btn-lock" onclick="lockVault()">🔒 Lock Vault & Reset</button>
+
+    <!-- OVERLAY -->
+    <div class="lock-overlay" id="lockOverlay">
+      <div class="icon">🔒</div>
+      <div id="lockMsg">Securing Vault...</div>
+    </div>
+
+  </div>
+
+<script>
+function lockVault() {
+  const overlay = document.getElementById("lockOverlay");
+  overlay.style.display = "flex";
+
+  requestAnimationFrame(() => {
+    overlay.style.opacity = "1";
+  });
+
+  const messages = [
+    "Encrypting data...",
+    "Clearing session...",
+    "Resetting authentication...",
+    "Finalizing security...",
+    "Vault locked!"
+  ];
+
+  let i = 0;
+  const msgEl = document.getElementById("lockMsg");
+  const interval = setInterval(() => {
+    msgEl.textContent = messages[i];
+    i++;
+    if (i === messages.length) {
+      clearInterval(interval);
+      setTimeout(() => window.location.href = "/", 900);
+    }
+  }, 700);
+}
+</script>
+
+</body>
+</html>

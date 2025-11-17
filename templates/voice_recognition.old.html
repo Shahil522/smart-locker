@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice Verification | Smart Locker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #4834d4;
+      --success-color: #2ecc71;
+      --error-color: #e74c3c;
+      --text-color: #2c3e50;
+      --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      background: var(--bg-gradient);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-color);
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .voice-indicator {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 0 auto 2rem;
+      position: relative;
+      background: #f8f9fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .voice-indicator.recording {
+      background: rgba(231, 76, 60, 0.1);
+      animation: pulse 1.5s infinite;
+    }
+
+    .voice-indicator.analyzing {
+      background: rgba(241, 196, 15, 0.1);
+    }
+
+    .voice-indicator.verified {
+      background: rgba(46, 204, 113, 0.1);
+    }
+
+    .voice-waves {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    .recording .voice-waves {
+      animation: wave 1.5s infinite;
+      border: 2px solid var(--error-color);
+    }
+
+    .analyzing .voice-waves {
+      animation: wave 1.5s infinite;
+      border: 2px solid #f1c40f;
+    }
+
+    .verified .voice-waves {
+      animation: wave 1.5s infinite;
+      border: 2px solid var(--success-color);
+    }
+
+    @keyframes wave {
+      0% {
+        opacity: 1;
+        transform: scale(0.8);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(1.5);
+      }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .mic-icon {
+      font-size: 3rem;
+      transition: all 0.3s ease;
+    }
+
+    .confidence-meter {
+      height: 4px;
+      background: #e2e8f0;
+      border-radius: 2px;
+      margin: 1rem 0;
+      overflow: hidden;
+    }
+
+    .confidence-value {
+      height: 100%;
+      width: 0%;
+      background: var(--primary-color);
+      transition: width 0.3s ease;
+    }
+
+    .verified .confidence-value {
+      background: var(--success-color);
+    }
+
+    .status-text {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin: 1rem 0;
+      min-height: 1.5em;
+    }
+
+    .action-button {
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s;
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .action-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(72,52,212,0.4);
+    }
+
+    .action-button:disabled {
+      background: #cbd5e0;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .retry-button {
+      background: none;
+      border: none;
+      color: var(--primary-color);
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      cursor: pointer;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: all 0.3s;
+    }
+
+    .retry-button:hover {
+      background: rgba(72,52,212,0.1);
+    }
+
+    .error-message {
+      color: var(--error-color);
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      display: none;
+    }
+
+    .success-message {
+      color: var(--success-color);
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      display: none;
+    }
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #2c3e50;
+      margin-bottom: 1.5rem;
+    }
+
+    .step-indicator {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .step {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 8px;
+      font-size: 14px;
+      color: #fff;
+      position: relative;
+    }
+
+    .step.completed {
+      background: #00b894;
+    }
+
+    .step.active {
+      background: linear-gradient(45deg, #4834d4, #686de0);
+    }
+
+    .step::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: #e0e0e0;
+      left: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .step:last-child::after {
+      display: none;
+    }
+
+    .record-button {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #4834d4, #686de0);
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 2rem auto;
+      position: relative;
+    }
+
+    .record-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(72, 52, 212, 0.4);
+    }
+
+    .record-button.recording {
+      animation: pulse 1.5s infinite;
+    }
+
+    .record-button.recording::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: rgba(72, 52, 212, 0.2);
+      animation: ripple 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes ripple {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(1.5); opacity: 0; }
+    }
+
+    .wave-container {
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1rem 0;
+    }
+
+    .wave {
+      width: 4px;
+      height: 20px;
+      background: #4834d4;
+      margin: 0 2px;
+      border-radius: 2px;
+      animation: wave 1s infinite ease-in-out;
+    }
+
+    @keyframes wave {
+      0% { height: 20px; }
+      50% { height: 40px; }
+      100% { height: 20px; }
+    }
+
+    .instructions {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin: 1.5rem 0;
+      text-align: left;
+    }
+
+    .instructions h3 {
+      margin: 0 0 1rem 0;
+      font-size: 1rem;
+      color: #2d3436;
+    }
+
+    .instructions ul {
+      margin: 0;
+      padding-left: 1.5rem;
+      color: #596275;
+    }
+
+    .instructions li {
+      margin: 0.5rem 0;
+    }
+
+    #msg {
+      margin-top: 1rem;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+    }
+
+    .msg-info {
+      background: #e3f2fd;
+      color: #2196f3;
+    }
+
+    .msg-success {
+      background: #d4f5e9;
+      color: #00b894;
+    }
+
+    .msg-error {
+      background: #ffe3e3;
+      color: #d63031;
+    }
+
+    .timer {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #4834d4;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Voice Verification</h1>
+    
+    <div class="step-indicator">
+      <div class="step completed">1</div>
+      <div class="step completed">2</div>
+      <div class="step active">3</div>
+    </div>
+
+    <div class="instructions">
+      <h3>Voice Verification Instructions:</h3>
+      <ul>
+        <li>Click the microphone button to start recording</li>
+        <li>Speak your passphrase clearly</li>
+        <li>Recording will automatically stop after 3 seconds</li>
+        <li>Ensure you're in a quiet environment</li>
+      </ul>
+    </div>
+
+    <button id="recordBtn" class="record-button">🎤</button>
+    
+    <div id="waveContainer" class="wave-container" style="display: none;">
+      <div class="wave" style="animation-delay: -0.4s"></div>
+      <div class="wave" style="animation-delay: -0.3s"></div>
+      <div class="wave" style="animation-delay: -0.2s"></div>
+      <div class="wave" style="animation-delay: -0.1s"></div>
+      <div class="wave" style="animation-delay: 0s"></div>
+    </div>
+
+    <div id="timer" class="timer" style="display: none;">3</div>
+    <p id="msg"></p>
+  </div>
+
+<script>
+let mediaRecorder, chunks = [];
+const recordBtn = document.getElementById("recordBtn");
+const msg = document.getElementById("msg");
+const waveContainer = document.getElementById("waveContainer");
+const timerDisplay = document.getElementById("timer");
+let isRecording = false;
+
+function showMessage(message, type = 'info') {
+  msg.textContent = message;
+  msg.className = `msg-${type}`;
+}
+
+function updateTimer(seconds) {
+  timerDisplay.style.display = 'block';
+  timerDisplay.textContent = seconds;
+}
+
+function startRecording() {
+  if (isRecording) return;
+  isRecording = true;
+  
+  recordBtn.classList.add('recording');
+  waveContainer.style.display = 'flex';
+  showMessage("Recording your voice...", "info");
+  
+  let timeLeft = 3;
+  updateTimer(timeLeft);
+  
+  const timerInterval = setInterval(() => {
+    timeLeft--;
+    updateTimer(timeLeft);
+    if (timeLeft <= 0) {
+      clearInterval(timerInterval);
+    }
+  }, 1000);
+}
+
+function stopRecording() {
+  if (!isRecording) return;
+  isRecording = false;
+  
+  recordBtn.classList.remove('recording');
+  waveContainer.style.display = 'none';
+  timerDisplay.style.display = 'none';
+  mediaRecorder.stop();
+  showMessage("Processing your voice...", "info");
+}
+
+recordBtn.onclick = async () => {
+  try {
+    if (!mediaRecorder) {
+      showMessage("Initializing microphone...", "info");
+      const stream = await navigator.mediaDevices.getUserMedia({
+        audio: {
+          echoCancellation: true,
+          noiseSuppression: true,
+          autoGainControl: true
+        }
+      });
+      
+      mediaRecorder = new MediaRecorder(stream);
+      mediaRecorder.ondataavailable = e => chunks.push(e.data);
+      mediaRecorder.onstop = async () => {
+        try {
+          const blob = new Blob(chunks, { type: "audio/wav" });
+          chunks = [];
+          
+          showMessage("Verifying voice pattern...", "info");
+          
+          const res = await fetch("/api/send_audio", {
+            method: "POST",
+            body: blob
+          });
+          
+          if (!res.ok) {
+            throw new Error('Server error: ' + res.statusText);
+          }
+
+          const data = await res.json();
+          if (data.saved) {
+            showMessage("Voice verified! Unlocking vault...", "success");
+            
+            setTimeout(() => {
+              // Create transition effect
+              const transition = document.createElement('div');
+              transition.style.position = 'fixed';
+              transition.style.top = '0';
+              transition.style.left = '0';
+              transition.style.width = '100%';
+              transition.style.height = '100%';
+              transition.style.background = '#4834d4';
+              transition.style.transition = 'opacity 0.5s';
+              transition.style.opacity = '0';
+              transition.style.zIndex = '1000';
+              document.body.appendChild(transition);
+              
+              requestAnimationFrame(() => {
+                transition.style.opacity = '1';
+                setTimeout(() => window.location.href = "/locker", 500);
+              });
+            }, 1000);
+          } else {
+            showMessage("Voice verification failed. Please try again.", "error");
+            recordBtn.disabled = false;
+          }
+        } catch (err) {
+          showMessage("Error processing voice: " + err.message, "error");
+          recordBtn.disabled = false;
+        }
+      };
+    }
+
+    startRecording();
+    recordBtn.disabled = true;
+    mediaRecorder.start();
+    
+    setTimeout(() => {
+      stopRecording();
+    }, 3000);
+    
+  } catch (err) {
+    if (err.name === 'NotAllowedError') {
+      showMessage("Microphone access denied. Please allow microphone access and try again.", "error");
+    } else {
+      showMessage("Error accessing microphone: " + err.message, "error");
+    }
+  }
+};
+</script>
+</body>
+</html>
